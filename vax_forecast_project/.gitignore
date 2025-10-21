@@ -1,0 +1,4 @@
+.env
+data/processed
+data/raw
+.vscode

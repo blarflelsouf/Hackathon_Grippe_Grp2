@@ -1,0 +1,14 @@
+artifact_uri: /home/blqrf/code/epitech/hackaton/vax_forecast_project/mlruns/917347456310273432/02b1d54d712547879edff604a02c1df3/artifacts
+end_time: 1760973071343
+entry_point_name: ''
+experiment_id: '917347456310273432'
+lifecycle_stage: active
+run_id: 02b1d54d712547879edff604a02c1df3
+run_name: GBDT_demand_weekly
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760973071338
+status: 4
+tags: []
+user_id: blqrf
