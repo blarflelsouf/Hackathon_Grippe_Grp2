@@ -89,7 +89,7 @@ Les **exogènes** (incidence, météo, urgences) sont extrapolés sur l’horizo
 
 ```bash
 pip install -r requirements.txt
-FORECAST_HORIZON_MONTHS=12 python -m src.train_pipeline
+FORECAST_HORIZON_MONTHS=6 python -m src.train_pipeline
 ```
 
 ---
