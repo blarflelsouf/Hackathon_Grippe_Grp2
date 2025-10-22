@@ -4,10 +4,10 @@ Exemple d'utilisation de l'optimiseur: convertir prévisions en plan de réassor
 import pandas as pd
 import numpy as np
 from .optimize_inventory import lp_replenishment
-from ..config import PROCESSED_DIR
+
 
 def make_plan(capacity=50000):
-    fc = pd.read_parquet(PROCESSED_DIR / "forecast_reconciled.parquet")
+    fc = pd.read_parquet('data/processed/forecast_reconciled_calibrated.parquet')
     # Agréger par région (toutes tranches d'âge confondues)
     agg = (fc.groupby(["date","region"], as_index=False)["yhat_reconciled"].sum())
 
@@ -20,5 +20,5 @@ def make_plan(capacity=50000):
 
     plan = lp_replenishment(regions, demand_mean, demand_p90, capacity)
     out = pd.DataFrame({"region": regions, "allocation": [plan[r] for r in regions]})
-    out.to_csv(PROCESSED_DIR / "reassort_plan.csv", index=False)
+    out.to_csv('data/processed/reassort_plan_from_latest.csv', index=False)
     return out
