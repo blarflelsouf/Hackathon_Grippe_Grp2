@@ -45,7 +45,7 @@ def fit_predict_ensemble(features_df: pd.DataFrame,
                          target="doses_per_100k",
                          group_cols=("region","age_band"),
                          min_train_months=8,
-                         horizon_months=2,
+                         horizon_months=8,
                          w_lgbm=0.7, w_base=0.3):
     """
     Entraîne LGBM (past-only features) + baseline saisonnière (lag12),

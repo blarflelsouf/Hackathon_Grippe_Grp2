@@ -32,7 +32,7 @@ def run_pipeline():
             reconciled = reconcile_topdown(nat, props, on=("region","age_band"),
                                            total_col="national_total", out_col="yhat_reconciled")
 
-            reconciled.to_parquet(PROCESSED_DIR / "forecast_reconciled.parquet", index=False)
+            reconciled.to_parquet("data/processed/forecast_reconciled_calibrated.parquet", index=False)
 
         metrics.to_csv(PROCESSED_DIR / "metrics_by_series.csv", index=False)
         return {"metrics": metrics.head(10).to_dict(orient="records")}
