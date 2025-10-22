@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assistant VacciBot 💬</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <div class="bot-info">
+        <div class="bot-avatar">🤖</div>
+        <div class="bot-name">
+          <strong>VacciBot</strong>
+          <span>En ligne</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="chat-body" class="chat-body">
+      <div class="message bot">
+        Bonjour ! Je suis votre assistant santé.<br/>
+      </div>
+    </div>
+
+    <form id="chat-form" class="chat-input">
+      <input id="user-input" type="text" placeholder="Écrivez votre message..." autocomplete="off" />
+      <button type="submit">➤</button>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
